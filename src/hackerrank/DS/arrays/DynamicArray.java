@@ -1,4 +1,4 @@
-package hackerrank.DS;
+package hackerrank.DS.arrays;
 
 import java.util.ArrayList;
 import java.util.List;

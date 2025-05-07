@@ -1,7 +1,6 @@
-package hackerrank.DS;
+package hackerrank.DS.arrays;
 
 import java.util.Arrays;
-import java.util.Collection;
 import java.util.Collections;
 
 public class ReverseArray {

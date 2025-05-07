@@ -1,4 +1,4 @@
-package hackerrank.DS;
+package hackerrank.DS.arrays;
 
 public class TwoDimensional {
    int[][] arr = {
