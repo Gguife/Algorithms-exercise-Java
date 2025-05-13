@@ -56,3 +56,25 @@ public class MergerSort {
     }
 
 }
+
+
+/* View Division
+*
+* mergeSort(arr, 0, 5)
+ ├─ mergeSort(arr, 0, 2)
+ │   ├─ mergeSort(arr, 0, 1)
+ │   │   ├─ mergeSort(arr, 0, 0) → [31]
+ │   │   ├─ mergeSort(arr, 1, 1) → [241]
+ │   │   └─ merge(...) → [31, 241]
+ │   ├─ mergeSort(arr, 2, 2) → [9]
+ │   └─ merge(...) → [9, 31, 241]
+ ├─ mergeSort(arr, 3, 5)
+ │   ├─ mergeSort(arr, 3, 4)
+ │   │   ├─ mergeSort(arr, 3, 3) → [26]
+ │   │   ├─ mergeSort(arr, 4, 4) → [421]
+ │   │   └─ merge(...) → [26, 421]
+ │   ├─ mergeSort(arr, 5, 5) → [18]
+ │   └─ merge(...) → [18, 26, 421]
+ └─ merge(...) final → [9, 18, 26, 31, 241, 421]
+*
+* */
