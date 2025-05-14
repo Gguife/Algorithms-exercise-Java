@@ -16,7 +16,7 @@ public class MergerSort {
             int q = (p + r) / 2; // Calc the medium point
             mergeSort(arr, p, q); // Sorted the first one
             mergeSort(arr, q + 1, r); // Sorted the second one
-            merge(arr, p, q, r); // Merge the two subArrays for principal array
+            exerciseOne(arr, p, q, r); // Merge the two subArrays for principal array
         }
     }
 
@@ -55,6 +55,49 @@ public class MergerSort {
         }
     }
 
+/* Merger sort book exercise - Thomas cormen - Pg.42
+ * 2.3-1
+ * 2.3-2
+ * 2.3-6
+ * */
+
+    // 2.3-1  2.3-2 2.3-6
+    public static void exerciseOne(int[] array, int p, int q, int r) {
+        int n1 = q - p + 1;
+        int n2 = r - q;
+
+        //temporary array
+        int[] L = new int[n1];
+        int[] R = new int[n2];
+
+        //copy the data for temporary arrays
+        for(int i = 0; i < n1; i++) {
+            L[i] = array[p + i];
+        }
+        for(int j = 0; j < n2; j++) {
+            R[j] = array[q + j + 1];
+        }
+
+        int i = 0, j = 0, k = p;
+
+        while(i < n1 && j < n2) {
+            if(L[i] <= R[j]) {
+                array[k++] = L[i++];
+            } else {
+                array[k++] = R[j++];
+            }
+        }
+
+        // Copy the remaining elements of L (if any)
+        while(i < n1) {
+            array[k++] = L[i++];
+        }
+
+        // Copy the remaining elements of R (if any)
+        while(j < n2) {
+            array[k++] = R[j++];
+        }
+    }
 }
 
 
