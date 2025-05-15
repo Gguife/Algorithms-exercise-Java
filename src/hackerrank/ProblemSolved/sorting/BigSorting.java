@@ -1,4 +1,4 @@
-package hackerrank.ProblemSolved;
+package hackerrank.ProblemSolved.sorting;
 
 import java.util.ArrayList;
 import java.util.Arrays;
