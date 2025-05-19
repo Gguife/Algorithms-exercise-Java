@@ -1,4 +1,4 @@
-package hackerrank.ProblemSolved;
+package hackerrank.ProblemSolved.string;
 
 import java.util.*;
 
